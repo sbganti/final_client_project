@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Career Exploration</title>
+</head>
+<body>
+
+    <header>
+   <div class="skip"><a href="#main-content">Skip to Main Content</a></div>
+        <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">
+        <nav>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "resume.html">Resumes</a></li>
+                <li><a href = "Networking.html">Networking & Connections</a></li>
+                <li class="active"><a href = "planning.html">Career Exploration</a></li>
+            </ul>
+            <div id="scroll-progress-container">
+    <div id="scroll-progress"></div>
+</div>
+        </nav>
+    <h1>Internship and Job Search Planning</h1>
+    </header>
+
+     <main id="main-content" class="container">
+
+      <section>
+            <img src="images/resume1.jpg" width="1000" alt="Two professionals reviewing a resume together.">
+      <h2>Quick Tips for the Job Search</h2>
+     <ul>
+      <li><strong>Set Weekly Goals:</strong> <p>Block out time on your calendar for job search tasks—small, consistent effort beats last-minute sprints.</p></li>
+      <li><strong>Customize Every Application:</strong> <p>Tailor your resume and cover letter for each position. Use keywords from the job posting for maximum impact!</p></li>
+      <li><strong>Track Your Applications:</strong> <p>Update your profile, connect with alumni, and engage with organizations you admire. Pro tip: let recruiters know you’re open to opportunities.</p></li>
+      <li><strong>Practice Your Pitch:</strong> <p>Prepare a short introduction about yourself for networking events and interviews—it’s your highlight reel!</p></li>
+      <li><strong>Stay Positive and Persistent:</strong> <p>Rejection is part of the process—don’t let it slow you down. Seek support and keep moving forward!</p></li>
+     </ul>
+      </section>
+
+      <section>
+      <h2>Job Planning Resources</h2>
+      <ul>
+        <li><strong>Streamline your job search with AI:</strong><a href="https://umich.instructure.com/courses/137916/modules/items/4342588" target="_blank">Job Search AI Prompt Guide</a></li>
+        <li><strong>Staying organized is essential to a successful and stress free job search:</strong><a href="https://umich.instructure.com/courses/137916/modules/items/3588808" target="blank"> Job Search Plan and Application Tracker</a></li>
+        <li><strong>Check out the recruiting timeline to apply efficiently:</strong><a href="https://docs.google.com/document/d/14Q3v3K5_SwgIAbkhCgyX9Vd3JPs9nR245ACvP3Csq5I/edit?tab=t.0" target="blank"> Recruiting Timeline</a></li>
+      </ul>
+      </section>
+
+      <section>
+      <h2>Internship & Job Search FAQ</h2>
+<!-- Acknowledgement: The logic in this dropdown function was adapted   from a code example found on JSFiddle (https://jsfiddle.net/fh0tL1as/). -->
+       <div class="wrapper">
+    <div class="tab blue">
+      <input id="tab-four" type="checkbox" name="tabs2">
+      <label for="tab-four">Should I start looking for internships or jobs?</label>
+      <div class="tab-content">
+        <p>It’s never too early—many employers recruit months in advance. Aim to start researching opportunities early in the semester.</p>
+      </div>
+    </div>
+    <div class="tab blue">
+      <input id="tab-five" type="checkbox" name="tabs2">
+      <label for="tab-five">How do I decide what types of opportunities to pursue?</label>
+      <div class="tab-content">
+        <p>List your interests, skills, and values. Talk to a coach, attend career events, and seek out alumni for advice.</p>
+      </div>
+    </div>
+    <div class="tab blue">
+      <input id="tab-six" type="checkbox" name="tabs2">
+      <label for="tab-six">What should I do if I don’t hear back?</label>
+      <div class="tab-content">
+        <p>Follow up respectfully after two weeks—and keep applying elsewhere! The right fit is out there.</p>
+      </div>
+    </div>
+  </div>
+    </section>
+
+      <section>
+      <h2>Connect with the UMSI Career Development Office</h2>
+       <div class="collage">
+        <img src="images/resume1.jpg" alt="A student talks to a recruiter at a career fair.">
+        <img src="images/resume2.jpg" alt="A student talks to a recruiter at a career fair.">
+        <img src="images/MCOMMONS-Earthfest2025-4.jpg" alt="A student talks to a recruiter at a career fair.">
+      </div>
+      <p>
+        The UMSI Career Development Office (CDO) offers personalized support through appointments, events, and resource guides. <a href="https://umich.instructure.com/courses/137916" target="_blank">Visit the CDO website</a> or <a href="https://www.si.umich.edu/about-umsi/getting-umsi" target="_blank">find us on campus</a> to learn more, schedule a coaching session, or just say hello.
+      </p>
+      </section>
+
+        <!-- Content taken & modified from UMGPT with the prompt, "write content for a page about planning your internship search for the CDO website of UMSI. Take this page as an example"
+        UMGPT. (2026). UMGPT ( GPT-4.1) [Large language model]. -->
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> University of Michigan School of Information | <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office</a></p>
+        </footer>
+         <script>
+// Logic adapted from KirstyF (Stack Overflow: https://stackoverflow.com/q/78168399)
+const progress = () => {
+    // We use documentElement to track the scroll of the entire page
+    const winScroll = window.pageYOffset || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollProgress = (winScroll / height) * 100;
+    
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+        progressBar.style.width = scrollProgress + "%";
+    }
+}
+
+window.addEventListener('scroll', progress);
+document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+<!-- Title: "Yellowed" CSS Style
+Author: Stephanie Eckles & contributors (stylestage.dev)
+Date Accessed: June 11, 2024
+Type: CSS Style Inspiration
+Availability: https://stylestage.dev/styles/yellowed/
+Note: Style concepts inspired this design.
+
+Title: Source code from JSFiddle
+Author: Unknown (JSFiddle user, no author listed)
+Date accessed: June 11, 2024
+Type: Source code (HTML/CSS/JavaScript)
+Availability: https://jsfiddle.net/fh0tL1as/
+Note: Used algorithm/concept as reference for the FAQ accordions 
+
+Title: CSS Box-Shadow Property 
+ReferenceAuthor: W3Schools.comDate 
+Accessed: June 11, 2024
+Type: Documentation/Reference
+Availability: https://www.w3schools.com/cssref/css3_pr_box-shadow.php
+Note: Box shadow property uses this as a reference.
+
+Title: Vanilla JavaScript to show scroll progress bar that fills only while scrolling
+ReferenceAuthor: Stack Overflow (community contributors)
+Date Accessed: March 29, 2026
+Type: Q&A / Technical Reference
+Availability: https://stackoverflow.com/questions/78168399/vanilla-javascript-to-show-scroll-progress-bar-that-fills-only-while-scrolling-t
+Note: Implementing a scroll progress bar in vanilla JavaScript.-->
